@@ -299,7 +299,7 @@ Prismic.Api('https://tiqe.prismic.io/api', function (err, Api) {
 
   if( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
-    $("#about,#exhibition,#blog,.opencall,.home,.insta,.links,#mc_embed_signup").show();
+    $(".title:first-child,#about,#exhibition,#blog,.opencall,.home,.insta,.links,#mc_embed_signup").show();
 
 
     $(".title").click(function(){

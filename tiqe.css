@@ -781,10 +781,12 @@ iframe {
   }
 
   .title:first-child {
+    display: inline;
     margin-bottom: 2vh;
-    font-size: 24;
+    font-size: 24 !important;
     width: auto;
     color: black;
+    top: 1vh;
   }
 
   .title:first-child:hover,.title:first-child:active {
