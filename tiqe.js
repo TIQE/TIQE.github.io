@@ -135,12 +135,12 @@ Prismic.Api('https://tiqe.prismic.io/api', function (err, Api) {
         title = results[i].getStructuredText("about_page.title").asHtml();
         description = results[i].getStructuredText("about_page.description").asHtml();
         groupName = results[i].getStructuredText("about_page.group_name").asHtml();
-        people = results[i].getGroup("about_page.people").asHtml();
+        // people = results[i].getGroup("about_page.people").asHtml();
 
         var peopleP = $("<div class='people'></div>");
 
-        peopleP.append(groupName,people);
-       	about.append(title,description,peopleP);
+        // peopleP.append(groupName,people);
+       	about.append(title,description);
         body.append(about);
 
       }
@@ -289,6 +289,18 @@ Prismic.Api('https://tiqe.prismic.io/api', function (err, Api) {
 
       $(ordered).appendTo(".blog");
 
+      // var $img = $(".blog > post > div iframe");
+      //     // var $imgR = $(".rightside > img");
+      //
+      //
+      //     $img.on('load', function(){
+      //       if ($(this).length > 0) {
+      //           alert('frame exists');
+      //           $(this).append('<div class="icon">Icon</div>');
+      //         }
+      //         });
+
+
     });
 
   }, "MC5XWERqSWlBQUFFUElzeWtp.OGjvv70O77-9TQbvv73vv73vv73vv73vv73vv73vv73vv707ETVuRe-_vQjvv73vv70j77-9Ju-_vT1SQkE");
@@ -299,7 +311,7 @@ Prismic.Api('https://tiqe.prismic.io/api', function (err, Api) {
 
   if( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
-    $(".title:first-child,#about,#exhibition,#blog,.opencall,.home,.insta,.links,#mc_embed_signup").show();
+    $("#about,#exhibition,#blog,.opencall,.home,.insta,.links,#mc_embed_signup").show();
 
 
     $(".title").click(function(){
