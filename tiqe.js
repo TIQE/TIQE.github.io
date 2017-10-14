@@ -100,7 +100,8 @@ Prismic.Api('https://tiqe.prismic.io/api', function (err, Api) {
 
       }
 
-      $(".open").click(function(){
+      $(document).on("click",".open,.opencall > h1:first",function(){
+        console.log("hello");
         $(".opencall").addClass("bigger");
         $(".close").show();
         $(".open").hide();
